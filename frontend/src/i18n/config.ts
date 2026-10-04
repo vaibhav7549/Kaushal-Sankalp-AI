@@ -5,6 +5,8 @@ import en from './en.json';
 import hi from './hi.json';
 import mr from './mr.json';
 
+const savedLng = typeof window !== 'undefined' ? localStorage.getItem('ks_language') || 'en' : 'en';
+
 i18n
   .use(initReactI18next)
   .init({
@@ -13,7 +15,7 @@ i18n
       hi: { translation: hi },
       mr: { translation: mr }
     },
-    lng: 'hi', // default to Hindi
+    lng: savedLng,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false // react already safes from xss

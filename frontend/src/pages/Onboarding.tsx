@@ -11,6 +11,7 @@ export default function Onboarding() {
   // Step 1: Language
   const handleLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+    localStorage.setItem('ks_language', lang);
     setStep(2);
   };
 

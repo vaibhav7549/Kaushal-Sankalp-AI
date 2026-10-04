@@ -20,6 +20,7 @@ class TurnRequest(BaseModel):
     text: str
     lang: str = "hi"
     input_mode: str = "text"
+    gemini_api_key: str | None = None
 
 
 class TurnResponse(BaseModel):
@@ -78,6 +79,7 @@ async def process_turn(body: TurnRequest, db: AsyncSession = Depends(get_db)):
         classification=classification,
         prev_turns=prev_turns,
         db=db,
+        gemini_api_key=body.gemini_api_key,
     )
 
     t3 = time.perf_counter()

@@ -9,21 +9,24 @@ from __future__ import annotations
 import re
 
 
-# ── Keyword sets (Devanagari + Romanised Hinglish + English) ────
+# ── Keyword sets (English + Hindi + Marathi + Hinglish) ────
 
 SOCIAL_STATUS_KEYWORDS = [
     "iti", "fail", "इज़्ज़त", "izzat", "log kya kahenge", "लोग क्या कहेंगे",
     "सरकारी नौकरी", "sarkari naukri", "degree", "डिग्री", "ba", "बीए",
     "kamzor", "कमज़ोर", "weak", "lower", "status", "prestige", "respect",
     "sharam", "शर्म", "society", "समाज", "acchi padhai", "अच्छी पढ़ाई",
-    "engineer", "doctor", "इंजीनियर", "डॉक्टर",
+    "engineer", "doctor", "इंजीनियर", "डॉक्टर", "मान", "प्रतिष्ठा", "समान",
+    "b.tech", "diploma", "कॉलेज", "college", "शिकणे", "पदवी", "हुद्दा",
 ]
 
 INCOME_KEYWORDS = [
     "paisa", "पैसा", "salary", "तनख्वाह", "tankhwah", "kam milta", "कम मिलता",
     "gig", "गिग", "income", "आमदनी", "kamai", "कमाई", "earning", "pay",
     "wage", "mazdoori", "मज़दूरी", "money", "paise", "पैसे", "mehnat",
-    "मेहनत", "low pay", "kitna milega", "कितना मिलेगा",
+    "मेहनत", "low pay", "kitna milega", "कितना मिलेगा", "पगार", "वेतन",
+    "उत्पन्न", "खर्च", "फीस", "fees", "stipend", "स्टाइपेंड", "विद्यावेतन",
+    "कमाई किती", "पगार किती", "रोजगार", "placement", "job", "नोकरी",
 ]
 
 FEMALE_SAFETY_KEYWORDS = [
@@ -31,27 +34,29 @@ FEMALE_SAFETY_KEYWORDS = [
     "suraksha", "akeli", "अकेली", "hostel", "हॉस्टल", "raat", "रात",
     "night", "daughter", "girl", "safety", "far", "alone", "travel",
     "bus", "transport", "cctv", "security", "dur", "bhejne",
-    "भेजने", "female", "women", "mahila", "महिला",
+    "भेजने", "female", "women", "mahila", "महिला", "मुलगी", "लेक",
+    "संरक्षण", "सुरक्षित", "लांब", "बस", "वस्तीगृह",
 ]
 
 OBSOLESCENCE_KEYWORDS = [
     "purana", "पुराना", "khatam", "ख़त्म", "machine le legi", "मशीन ले लेगी",
     "ai", "robot", "future", "भविष्य", "outdated", "old", "replaced",
     "automation", "digital", "technology", "tech", "naya zamana",
-    "नया ज़माना", "chalta nahi", "चलता नहीं",
+    "नया ज़माना", "chalta nahi", "चलता नहीं", "कालबाह्य", "मशीन", "बंद",
+    " scope", "स्कोप", "मार्ग", "वाव", "फायदा",
 ]
 
 DISTRESS_KEYWORDS = [
     "help", "मदद", "madad", "dar lagta", "डर लगता", "harassment", "उत्पीड़न",
     "violence", "हिंसा", "crisis", "emergency", "danger", "khatara", "ख़तरा",
     "suicide", "depression", "financial crisis", "barbad", "बर्बाद",
-    "pareshan", "परेशान", "tang", "तंग",
+    "pareshan", "परेशान", "tang", "तंग", "त्रास", "संकट", "भीती", "मदत",
 ]
 
 INTENSITY_MARKERS = [
     "never", "no way", "नहीं", "कभी नहीं", "kabhi nahi", "bilkul nahi",
     "बिल्कुल नहीं", "impossible", "namumkin", "नामुमकिन", "refused",
-    "nahi nahi", "नहीं नहीं", "no no", "absolutely not",
+    "nahi nahi", "नहीं नहीं", "no no", "absolutely not", "मुळीच नाही", "कधीच नाही", "नाही",
 ]
 
 

@@ -1,14 +1,41 @@
 {
+  "nav": {
+    "title": "Kaushal Sankalp AI",
+    "problem": "Problem Statement",
+    "solution": "Solution & Tech",
+    "trades": "Career Explorer",
+    "research": "Research & Impact",
+    "simulation": "Simulation Hub"
+  },
   "onboarding": {
     "title": "Welcome to Kaushal Sankalp",
-    "language_select": "Choose Language",
+    "subtitle": "Voice-First Career Counselling & Family Decision Engine",
+    "language_select": "Choose Your Language",
     "consent_title": "Your Privacy Matters",
-    "consent_agree": "I Agree",
-    "profile_title": "Family Profile"
+    "consent_desc": "Your conversation is used only for personalised career mediation. All data is protected under India Digital Personal Data Protection (DPDP) Act standards.",
+    "consent_agree": "I Agree & Continue",
+    "profile_title": "Family Profile & Context",
+    "start_session": "Start Family Counselling Session"
   },
   "session": {
-    "talk_counsellor": "Talk to a counsellor",
-    "learner_mode": "Learner",
-    "parent_mode": "Parent"
+    "talk_counsellor": "Connect to Live Counsellor",
+    "learner_mode": "Learner Mode",
+    "parent_mode": "Parent Mode",
+    "ai_assistant": "Kaushal Sankalp AI",
+    "active_mediator": "Empathetic Triadic Mediator",
+    "input_placeholder": "Ask your question or express any concern...",
+    "listening": "Listening... Speak naturally",
+    "ai_typing": "Consulting verified DPI registries...",
+    "suggestions_label": "Recommended topics to ask:",
+    "settings_title": "AI Engine Settings",
+    "gemini_key_label": "Google Gemini API Key (Optional)",
+    "gemini_key_desc": "Enable Google Gemini 1.5/2.5 for Siri-like human conversational intelligence. Leave empty to use high-precision local RAG engine.",
+    "save_settings": "Save Settings",
+    "voice_on": "Voice Auto-Speak Active",
+    "voice_muted": "Voice Muted",
+    "welcome_mediator": "Hello! I am your AI career companion. Welcome to Kaushal Sankalp. I help families explore vocational education with verified government outcome data. Please ask me any questions about salary, safety, career growth, or degree mobility.",
+    "escalation_title": "High Friction Detected",
+    "escalation_desc": "Parental resistance score has exceeded threshold (R_s > 0.75). A certified SSDM counsellor can join this session immediately.",
+    "call_counsellor": "Call Live PMKK Counsellor"
   }
 }
