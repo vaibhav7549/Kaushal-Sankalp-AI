@@ -1,0 +1,14 @@
+{
+  "onboarding": {
+    "title": "कौशल संकल्प मध्ये आपले स्वागत आहे",
+    "language_select": "भाषा निवडा",
+    "consent_title": "तुमची गोपनीयता महत्त्वाची आहे",
+    "consent_agree": "मी सहमत आहे",
+    "profile_title": "कुटुंबाची माहिती"
+  },
+  "session": {
+    "talk_counsellor": "समुपदेशकाशी बोला",
+    "learner_mode": "विद्यार्थी",
+    "parent_mode": "पालक"
+  }
+}

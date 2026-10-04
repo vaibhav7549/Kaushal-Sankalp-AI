@@ -1,0 +1,41 @@
+# Master .gitignore for Kaushal Sankalp SIH Project
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+ENV/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.npm
+*.tsbuildinfo
+
+# Databases & local generated data (Securing sensitive data)
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite
+
+# Logs & temp files
+*.log
+docs/lighthouse/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

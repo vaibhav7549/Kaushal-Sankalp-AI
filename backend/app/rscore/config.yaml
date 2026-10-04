@@ -1,0 +1,30 @@
+# R_s Engine Configuration
+# Kaushal Sankalp AI — SIH 2026
+
+weights:
+  neg_sentiment: 0.30
+  obj_density: 0.20
+  repetition: 0.20
+  unresolved: 0.20
+  intensity: 0.10
+
+window: 8  # Number of parent turns to consider
+
+bands:
+  open:
+    max: 0.40
+    color: "#16A34A"
+    label: "Open"
+  concerned:
+    max: 0.75
+    color: "#F59E0B"
+    label: "Concerned"
+  high_friction:
+    max: 1.0
+    color: "#DC2626"
+    label: "High Friction"
+
+escalation:
+  consecutive_turns_threshold: 2
+  single_turn_threshold: 0.85
+  hysteresis_threshold: 0.75

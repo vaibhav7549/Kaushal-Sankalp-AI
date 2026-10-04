@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ks-blue-600: #0B63B8;
+    --ks-blue-50: #EAF3FC;
+    --navy-900: #0B1F4B;
+    --navy-700: #14357F;
+    --mint-100: #D8F0E4;
+    --mint-600: #1F9D6B;
+    --saffron-500: #FF9933;
+    --saffron-50: #FFF4E6;
+    --green-600: #138808;
+    --learner: #2563EB;
+    --learner-bg: #DBEAFE;
+    --parent: #F97316;
+    --parent-bg: #FFEDD5;
+    --mediator: #14357F;
+    --mediator-bg: #E5ECFA;
+    --rs-low: #16A34A;
+    --rs-mid: #F59E0B;
+    --rs-high: #DC2626;
+    
+    --bg: #FAFCFF;
+    --surface: #FFFFFF;
+    --ink: #0F172A;
+    --muted: #64748B;
+    --border: #E2E8F0;
+
+    --radius: 1rem; /* 16px */
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Premium UI Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-dark {
+  background: rgba(11, 31, 75, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--ks-blue-600) 0%, var(--navy-900) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mesh-bg {
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(210,100%,74%,0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,76%,0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,76%,0.1) 0px, transparent 50%);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 15px rgba(37, 99, 235, 0.3); }
+  50% { opacity: .7; box-shadow: 0 0 25px rgba(37, 99, 235, 0.6); }
+}
+
+.mask-edges {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+

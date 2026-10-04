@@ -1,0 +1,14 @@
+{
+  "onboarding": {
+    "title": "Welcome to Kaushal Sankalp",
+    "language_select": "Choose Language",
+    "consent_title": "Your Privacy Matters",
+    "consent_agree": "I Agree",
+    "profile_title": "Family Profile"
+  },
+  "session": {
+    "talk_counsellor": "Talk to a counsellor",
+    "learner_mode": "Learner",
+    "parent_mode": "Parent"
+  }
+}
