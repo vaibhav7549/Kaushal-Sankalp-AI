@@ -70,6 +70,7 @@ class Settings(BaseSettings):
         
         # Absolute path for sqlite
         db_path = Path(self.DATA_DIR) / "kaushal_sankalp.db"
+        db_path.parent.mkdir(parents=True, exist_ok=True)
         # On windows, we need three slashes for absolute path in URI
         path_str = str(db_path).replace("\\", "/")
         return f"sqlite+aiosqlite:///{path_str}"

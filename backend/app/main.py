@@ -76,6 +76,7 @@ async def add_timing(request: Request, call_next):
 
 
 # ── Health & Meta ───────────────────────────────────────────────
+@app.get("/")
 @app.get("/api/v1/health")
 async def health():
     return {
