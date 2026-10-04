@@ -18,11 +18,12 @@ export default function Admin() {
 
   useEffect(() => {
     // Fetch mock data from our backend
-    fetch('http://localhost:8000/api/v1/admin/kpis')
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    fetch(`${apiUrl}/api/v1/admin/kpis`)
       .then(r => r.json())
       .then(setKpis);
       
-    fetch('http://localhost:8000/api/v1/admin/geo/pri')
+    fetch(`${apiUrl}/api/v1/admin/geo/pri`)
       .then(r => r.json())
       .then(setGeoData);
   }, []);

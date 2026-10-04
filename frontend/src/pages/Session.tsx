@@ -26,7 +26,8 @@ export default function Session() {
 
   // Fetch initial session data
   useEffect(() => {
-    fetch(`http://localhost:8000/api/v1/sessions/${id}`)
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    fetch(`${apiUrl}/api/v1/sessions/${id}`)
       .then(res => {
         if (!res.ok) throw new Error('Session not found or server offline');
         return res.json();
@@ -72,7 +73,8 @@ export default function Session() {
     setIsTyping(true);
 
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/chat/turn`, {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const res = await fetch(`${apiUrl}/api/v1/chat/turn`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

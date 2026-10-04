@@ -35,7 +35,8 @@ export default function Onboarding() {
   const handleComplete = async () => {
     setIsStarting(true);
     try {
-      const response = await fetch('http://localhost:8000/api/v1/sessions', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/api/v1/sessions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
